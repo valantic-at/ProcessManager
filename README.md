@@ -1,11 +1,10 @@
 # Pimcore Studio Version
 
 Dear community,
+
 since we couldn't find an adequate replacement for the ProcessManager in Pimcore Studio, we have decided to migrate it and make it available in the Pimcore Store.
 
-If you are interested in the Pimcore Store version, please follow this issue, as we will announce its availability here.
-
-More information can be found [here](https://github.com/valantic-at/ProcessManager/issues/234).
+If you are interested in the Pimcore Store version, please follow this issue, as we will announce its availability [here](https://github.com/valantic-at/ProcessManager/issues/234).
 
 
 # Pimcore Process Manager Bundle
