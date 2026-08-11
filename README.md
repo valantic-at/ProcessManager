@@ -2,10 +2,16 @@
 
 Dear community,
 
-since we couldn't find an adequate replacement for the ProcessManager in Pimcore Studio, we have decided to migrate it and make it available in the Pimcore Store.
+**the ProcessManager has been rewritten from the ground up for Pimcore Studio and is
+now available in the Pimcore Store as [Job Manager](https://store.pimcore.com/shop/job-manager-213) —
+with a modern Studio UI and a significantly improved architecture and user experience.**
 
-If you are interested in the Pimcore Store version, please follow this issue, as we will announce its availability [here](https://github.com/valantic-at/ProcessManager/issues/234).
+**Example videos:**
 
+* [Job Manager – Overview](https://www.youtube.com/watch?v=Q1r9RMJFmUo)
+* [Job Manager – Custom execution settings](https://www.youtube.com/watch?v=eVJIW4Fy4Og)
+
+The version documented below targets the classic Pimcore Admin UI and will no longer be actively developed.
 
 # Pimcore Process Manager Bundle
 
