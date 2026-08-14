@@ -263,7 +263,7 @@ trait ExecutionTrait
      *
      * @throws \Exception
      */
-    public static function executeChildProcesses(MonitoringItem $monitoringItem, array $workload, int $numberOfchildProcesses = 5, int $batchSize = 10, callable $callback = null, $startAfterPackage = null): void
+    public static function executeChildProcesses(MonitoringItem $monitoringItem, array $workload, int $numberOfchildProcesses = 5, int $batchSize = 10, ?callable $callback = null, $startAfterPackage = null): void
     {
         $workloadChunks = array_chunk($workload, $batchSize); //entries per process
         $childProcesses = $monitoringItem->getChildProcesses();
