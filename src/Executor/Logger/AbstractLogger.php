@@ -8,8 +8,7 @@
 namespace Elements\Bundle\ProcessManagerBundle\Executor\Logger;
 
 use Elements\Bundle\ProcessManagerBundle\Model\MonitoringItem;
-use Monolog\Handler\StreamHandler;
-use Pimcore\Bundle\ApplicationLoggerBundle\Handler\ApplicationLoggerDb;
+use Monolog\Handler\HandlerInterface;
 
 abstract class AbstractLogger
 {
@@ -93,9 +92,16 @@ abstract class AbstractLogger
     abstract public function getGridLoggerHtml(MonitoringItem $monitoringItem, array $actionData): string;
 
     /**
+     * Returns the log writer which is registered on the monitoring item logger.
+     *
+     * Any Monolog handler is accepted here, because the return value is passed to
+     * ApplicationLogger::addWriter(), which handles every HandlerInterface implementation.
+     * Restricting this to StreamHandler would rule out handlers that do not write to a
+     * stream, for example the AsyncAws CloudWatch handler.
+     *
      * @param array<mixed> $config
      * @param MonitoringItem $monitoringItem
      *
      */
-    abstract public function createStreamHandler(array $config, MonitoringItem $monitoringItem): StreamHandler | ApplicationLoggerDb | null;
+    abstract public function createStreamHandler(array $config, MonitoringItem $monitoringItem): ?HandlerInterface;
 }
